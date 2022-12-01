@@ -432,7 +432,7 @@
                         e._v(" "),
                         r("div", { staticClass: "mt-20 text-center" }, [
                           e._v(
-                            "\n                        Receive BNB, GES, GEG\n                    "
+                            "\n                        Receive BNB, MGA, MGAs\n                    "
                           ),
                         ]),
                         e._v(" "),
@@ -1142,13 +1142,13 @@
                                 isCrowdSales: !1,
                                 isAuction: !1,
                                 callbackSuccess: function () {
-                                  o.$log.debug(h, "submit - GES approved"),
+                                  o.$log.debug(h, "submit - MGA approved"),
                                     (o.isApprovedCoinStorageFee = !0);
                                 },
                                 callbackFailed: function () {
                                   o.$log.warn(
                                     h,
-                                    "submit - error in approving GES"
+                                    "submit - error in approving MGA"
                                   );
                                 },
                               })

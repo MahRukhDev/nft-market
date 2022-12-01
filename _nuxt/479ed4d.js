@@ -4009,8 +4009,8 @@
               },
               {
                 id: "ges",
-                name: "GES",
-                names: { en: "GES", zh: "GES" },
+                name: "MGA",
+                names: { en: "MGA", zh: "MGA" },
                 num: 0,
               },
               {
@@ -4367,15 +4367,15 @@
                       case 5:
                         return (
                           (l = c["staticData/getCurrencies"].find(function (e) {
-                            return "GES" == e.Code.toUpperCase();
+                            return "MGA" == e.Code.toUpperCase();
                           })),
                           (d = new o.a.providers.Web3Provider(
                             n.library.provider
                           )),
                           (y = d.getSigner()),
-                          S.a.$log.debug(F, "getGESBalance - gesABI", U),
+                          S.a.$log.debug(F, "getMGABalance - gesABI", U),
                           (m = "0xDa7c8b7374f600b229Be7B7A237ad178329530b9"),
-                          S.a.$log.debug(F, "getGESBalance - add", m),
+                          S.a.$log.debug(F, "getMGABalance - add", m),
                           (f = new o.a.Contract(m, U, d)),
                           (h = f.connect(y)),
                           (t.next = 15),
@@ -4944,7 +4944,7 @@
                       case 12:
                         if (
                           ((v = n.sent),
-                          S.a.$log.debug(F, "GES allowance balance", v),
+                          S.a.$log.debug(F, "MGA allowance balance", v),
                           !(v > 0))
                         ) {
                           n.next = 16;
@@ -5603,7 +5603,7 @@
                             (n.next = 44);
                           break;
                         case 27:
-                          if ("GES" != m) {
+                          if ("MGA" != m) {
                             n.next = 35;
                             break;
                           }
@@ -5613,7 +5613,7 @@
                             (k = o.a.utils.parseUnits(f + "", O.Decimals)),
                             S.a.$log.debug(
                               F,
-                              "signSellOrder - sell on GES, price",
+                              "signSellOrder - sell on MGA, price",
                               k
                             ),
                             (A = 1),
@@ -6092,7 +6092,7 @@
                               : "ges" == A
                               ? ((I = d["staticData/getCurrencies"].find(
                                   function (e) {
-                                    return "GES" == e.Code.toUpperCase();
+                                    return "MGA" == e.Code.toUpperCase();
                                   }
                                 )),
                                 (R = o.a.utils.parseUnits(k + "", I.Decimals)),
@@ -6308,7 +6308,7 @@
                             ((r = e.state),
                             (c = e.dispatch),
                             (d = e.rootGetters),
-                            S.a.$log.debug(F, "buyGES", t),
+                            S.a.$log.debug(F, "buyMGA", t),
                             (m = t.pool),
                             (f = t.buyCurrencyCode),
                             (h = t.buyPayablePrice),
@@ -6398,7 +6398,7 @@
                             break;
                           }
                           return (
-                            S.a.$log.debug(F, "Buy GES - send bnb currency"),
+                            S.a.$log.debug(F, "Buy MGA - send bnb currency"),
                             (n.next = 34),
                             I.exchangeV2(j, B, N, _, { value: O })
                           );
